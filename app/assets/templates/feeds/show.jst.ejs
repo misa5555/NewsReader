@@ -1,0 +1,10 @@
+<h2><%= feed.title %></h2>
+
+<button class='refresh'>Refresh</button>
+
+<% feed.entries().each( function(entry){ %>
+    <ul>
+      <li><%= entry.get("title") %></li>
+    </ul>
+<% }); %>
+
