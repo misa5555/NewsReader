@@ -3,6 +3,11 @@ class Api::EntriesController < ApplicationController
     feed = Feed.find(params[:feed_id])
     render :json => feed.entries
   end
+  
+  def show
+    entry = Entry.find(params[:id])
+    render :json => entry
+  end  
 
   private
   def entry_params

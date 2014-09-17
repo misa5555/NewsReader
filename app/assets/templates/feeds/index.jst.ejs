@@ -1,6 +1,18 @@
 <h2>All Feeds</h2>
+<form>
+  <h3>Add a new feed</h3>
+  <label for="feedTitle">Title:</label>
+  <input type="text" id="feedTitle" name="feed[title]">
+  
+  <label for:"feedUrl">URL:</label>
+  <input type="text" id="feedUrl" name="feed[url]">
+  
+  <input type="submit">
+</form>
+  
 <ul>
   <% feeds.each( function(feed) { %>
-    <li><a href="#feeds/<%=feed.id%>"><%= feed.escape('title')%></a></li>
+    <li><a href="#feeds/<%=feed.id%>"><%= feed.escape('title')%></a>
+      <button>Delete</button></li>
   <% }); %>
 </ul>

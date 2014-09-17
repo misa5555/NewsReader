@@ -1,4 +1,5 @@
 NewsReader.Collections.Entries = Backbone.Collection.extend({
+  url: 'api/feeds',
   model: NewsReader.Models.Entry,
   
   url: function () {
